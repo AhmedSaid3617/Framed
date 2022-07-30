@@ -30,22 +30,29 @@ img_label = Label(image=img)
 e = Entry(width=50, bd=4, font=FONT)
 
 #  Buttons
-button_1 = Button(text="1", bg=NORM_BUTTON_COLOUR, font=10, command=lambda: switch_img(0, img_label, pictures))
-button_2 = Button(text="2", bg=NORM_BUTTON_COLOUR, font=10, command=lambda: switch_img(1, img_label, pictures))
-button_3 = Button(text="3", bg=NORM_BUTTON_COLOUR, font=10, command=lambda: switch_img(2, img_label, pictures))
-button_4 = Button(text="4", bg=NORM_BUTTON_COLOUR, font=10, command=lambda: switch_img(3, img_label, pictures))
-button_5 = Button(text="5", bg=NORM_BUTTON_COLOUR, font=10, command=lambda: switch_img(4, img_label, pictures))
-button_6 = Button(text="6", bg=NORM_BUTTON_COLOUR, font=10, command=lambda: switch_img(5, img_label, pictures))
+button_1 = Button(text="1", bg=NORM_BUTTON_COLOUR, activebackground=CLICKED_BUTTON_COLOUR, font=10,
+                  command=lambda: switch_img(0, img_label, pictures))
+button_2 = Button(text="2", bg=NORM_BUTTON_COLOUR, activebackground=CLICKED_BUTTON_COLOUR, font=10,
+                  command=lambda: switch_img(1, img_label, pictures))
+button_3 = Button(text="3", bg=NORM_BUTTON_COLOUR, activebackground=CLICKED_BUTTON_COLOUR, font=10,
+                  command=lambda: switch_img(2, img_label, pictures))
+button_4 = Button(text="4", bg=NORM_BUTTON_COLOUR, activebackground=CLICKED_BUTTON_COLOUR, font=10,
+                  command=lambda: switch_img(3, img_label, pictures))
+button_5 = Button(text="5", bg=NORM_BUTTON_COLOUR, activebackground=CLICKED_BUTTON_COLOUR, font=10,
+                  command=lambda: switch_img(4, img_label, pictures))
+button_6 = Button(text="6", bg=NORM_BUTTON_COLOUR, activebackground=CLICKED_BUTTON_COLOUR, font=10,
+                  command=lambda: switch_img(5, img_label, pictures))
 
-button_submit = Button(text="Submit", bg=NORM_BUTTON_COLOUR, font=10, command=lambda: guess(buttons_list, 284,
-                                                                                            img_label, pictures,
-                                                                                            e, guesses_label,
-                                                                                            button_submit))
+button_submit = Button(text="Submit", bg=NORM_BUTTON_COLOUR, font=10, activebackground=CLICKED_BUTTON_COLOUR,
+                       command=lambda: guess(buttons_list, 284,
+                                             img_label, pictures,
+                                             e, guesses_label,
+                                             button_submit))
+
 buttons_list = [[button_2, 1], [button_3, 2], [button_4, 3], [button_5, 4], [button_6, 5]]
 
 # Guesses left label
 guesses_label = Label(text="You have 6 guesses left!", font=FONT, fg=GUESSES_COLOUR)
-
 
 # Display
 #  Label
@@ -62,6 +69,4 @@ x_button = X_BUTTON_START
 # Guesses label
 guesses_label.place(x=359, y=700, width=250, height=50)
 
-
 root.mainloop()
-
