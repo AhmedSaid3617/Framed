@@ -1,3 +1,10 @@
 1,Knives Out
 2,Jojo Rabbit
 3,Arrival
+4,Logan
+5,Interstellar
+6,Whiplash
+7,The Breakfast Club
+8,Django Unchained
+9,Moonlight
+10,Baby Driver
